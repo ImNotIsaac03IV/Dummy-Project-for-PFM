@@ -6,6 +6,9 @@
 # dotenv files
 .env
 
+#docker database files
+/docker/pgdata
+
 # User-specific files
 *.rsuser
 *.suo
