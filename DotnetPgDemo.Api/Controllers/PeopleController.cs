@@ -20,10 +20,9 @@ namespace DotnetPgDemo.Api.Controllers
         {
             try
             {
-                _context.People.AddAsync(person);
+                await _context.People.AddAsync(person);
                 await _context.SaveChangesAsync();
-
-                return CreatedAtRoute("GetPersonById", new { id = person.Id }, person); //201 created
+                return CreatedAtRoute("GetPersonById", new { id = person.Id }, person);
             }
             catch (Exception ex)
             {
